@@ -1,10 +1,22 @@
 <!DOCTYPE html>
+
+
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Horizontal Scrolling</title>
+<title>The Alumni!</title>
+<link rel="icon" href="1logo.png">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap">
+
 <style>
+    @font-face {
+    font-family: 'rebelton';
+    src: url('rebelton-extended.woff2') format('woff2'),
+         url('rebelton-extended.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
     .background {
         position: fixed;
         width: 100vw;
@@ -183,6 +195,7 @@
     }
 </style>
 <style>
+    
     .popup {
         display: none;
         position: fixed;
@@ -231,6 +244,7 @@
     .title2 { 
         position:absolute;
         transform: translate(-50%,-50%);
+        filter: blur(3px);
         top: 73px;
         left: 50.2%;
         font-family:"rebelton", sans-serif;
@@ -248,7 +262,32 @@
         color:#ffffff;
         z-index: 998;
     }
+
+    .LOWER1 { 
+        position:absolute;
+        transform: translate(-50%,-50%);
+        bottom: 120px;
+        left: 50%;
+        font-family:"rebelton", sans-serif;
+        font-size: 18px;
+        color:#ffffff;
+        z-index: 998;
+    }
+
+    .LOWER2 { 
+        position:absolute;
+        transform: translate(-50%,-50%);
+        bottom: 10px;
+        left: 50%;
+        font-family:"rebelton", sans-serif;
+        font-size: 10px;
+        font-weight: bold;
+        color:#ffffff75;
+        z-index: 998;
+    }
+
     .popbutton {
+        display: none;
         position: absolute;
         transform: translate(-50%,-50%);
         top: 90%;
@@ -256,16 +295,31 @@
         font-family: "montserrat", sans-serif;
         color: #ffffff;
     }
+
+    .popup:hover {
+    cursor: pointer; /* Change cursor to pointer on hover */
+    }
+
+    .home-button {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+    }
+    .home-button img {
+        width: 50px;
+        height: 50px;
+    }
     
 </style>
 </head>
 <body>
+    
     <div class="background">
         <div class="title">
-            MEET THE ALUMINS
+            MEET THE ALUMNI
         </div>
         <div class="title2">
-            MEET THE ALUMINS
+            MEET THE ALUMNI
         </div>
         <div class="title3">
             2020-2024
@@ -356,25 +410,28 @@
         <div class="item">
             <img src="templates\template22.png" class="card" alt="Item 22">
         </div>
-        <div class="item">
-            <img src="templates\template23.png" class="card" alt="Item 23">
-        </div>
-        <div class="item">
-            <img src="templates\template24.png" class="card" alt="Item 24">
-        </div>
-        <div class="item">
-            <img src="templates\template25.png" class="card" alt="Item 25">
-        </div>
+      
+    </div>
+
+    <div class="LOWER1">
+        Use Scrollwheel to scroll
     </div>
 
     <div class="popup" id="popup">
         <img src="templates/BOX.png">
     </div>
-    
-    <a class="popbutton" href="https://youtu.be/9f3E6RVm1co?si=DAQokYe0W0hFklgv">
-        Click Here to Watch the Video
+    <a href="index.html" style="position: absolute; top: 58px; left: 50px; transform: translateX(-50%);">
+        <img src="img/home.png" alt="Home" style="width: 24px; height: auto;">
     </a>
     
+    
+    <a class="popbutton" id="popbutton">
+        Click Anywhere Else To Dismiss
+    </a>
+    
+    <a class="LOWER2" href="credits.html">
+        Made by: Bivraj and Kailash with guidance of Dev Ashrit at Zairza [See Credit]
+    </a>
     
     
     
@@ -382,40 +439,52 @@
     document.addEventListener("DOMContentLoaded", function() {
         setTimeout(function() {
             document.getElementById("popup").style.display = "block";
-        }, 5000); // 5 seconds
+            document.getElementById("popbutton").style.display = "block";
+        }, 3000); // 3 seconds
     
         document.addEventListener("click", function(event) {
             var popup = document.getElementById("popup");
             if (popup.style.display === "block" && !popup.contains(event.target)) {
                 popup.style.display = "none";
+                popbutton.style.display = "none";
             }
         });
     });
     document.getElementById("popup").addEventListener("click", function() {
-        window.location.href = "https://youtu.be/9f3E6RVm1co?si=DAQokYe0W0hFklgv"; // Replace with your desired URL
-    });
+    window.open("https://youtu.be/9f3E6RVm1co?si=DAQokYe0W0hFklgv", "_blank");
+});
+// Replace with your desired URL
+    
 </script>
 <script>
     const container = document.getElementById('container');
-    let scrollValue = 0;
+    const content = container.innerHTML; // Store the original content
 
+    // Duplicate the content to ensure continuous scrolling
+    container.innerHTML += content;
+
+    // Function to handle horizontal scrolling
     function scrollHorizontally(e) {
-        e = window.event || e;
-        const delta = Math.max(-1, Math.min(1, (e.wheelDelta || -e.detail)));
-        container.scrollLeft -= (delta * 40); // Multiplier determines scrolling speed
-        e.preventDefault();
+        e.preventDefault(); // Prevent default scrolling behavior
+
+        const delta = e.deltaY || e.detail || e.wheelDelta; // Detecting scroll direction
+        container.scrollLeft += delta;
+
+        // Check if we have scrolled past the original content and reset scroll position
+        if (container.scrollLeft >= container.scrollWidth / 2) {
+            container.scrollLeft -= container.scrollWidth / 2;
+        } else if (container.scrollLeft < 0) {
+            container.scrollLeft += container.scrollWidth / 2;
+        }
     }
 
-    if (container.addEventListener) {
-        // IE9, Chrome, Safari, Opera
-        container.addEventListener('mousewheel', scrollHorizontally, false);
-        // Firefox
-        container.addEventListener('DOMMouseScroll', scrollHorizontally, false);
-    } else {
-        // IE 6/7/8
-        container.attachEvent('onmousewheel', scrollHorizontally);
-    }
+    // Attach wheel event listener
+    container.addEventListener('wheel', scrollHorizontally, { passive: false }); // Modern way
+
+    // For Firefox
+    container.addEventListener('DOMMouseScroll', scrollHorizontally, false);
 </script>
+
 
 </body>
 </html>
