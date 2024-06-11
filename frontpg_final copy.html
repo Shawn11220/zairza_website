@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Sanad-E-Zairza</title>
+  <link rel="icon" href="1logo.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Krona+One&display=swap" rel="stylesheet">  
@@ -195,15 +196,30 @@
 }
 
 .grid-container {
-  display: grid;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  grid-template-columns: repeat(11, 132px);
-  grid-template-rows: repeat(4, 132px); 
-  grid-gap: 1px;
-  width: 98%;
+    display: grid;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    grid-template-columns: repeat(11, 10vw); /* Set initial column size using viewport width */
+    grid-template-rows: repeat(4, 10vw); /* Set initial row size using viewport width */
+    grid-gap: 1px;
+    width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+    .grid-container {
+        grid-template-columns: repeat(11, 8vw); 
+        grid-template-rows: repeat(4, 8vw); 
+    }
+}
+
+/* for bigger */
+@media screen and (min-width: 1200px) {
+    .grid-container {
+        grid-template-columns: repeat(11, 9vw); 
+        grid-template-rows: repeat(4, 9vw); 
+    }
 }
 
 .grid-item {
@@ -358,6 +374,16 @@
   left: 50%;
   
 }
+.LOWER2 { 
+        position:absolute;
+        transform: translate(-50%,-50%);
+        top: 95%;
+        left: 5%;
+        font-family:"rebelton", sans-serif;
+        font-size: 15px;
+        color:#ffffff;
+        z-index: 998;
+    }
 
 </style>
 <body>
@@ -564,14 +590,24 @@
     <img src="img\image44.jpg" alt="Image 4">
   </div> 
 </div>
-<div class="click">-: Rigth Click Anywhere To Continue :-</div>  
+<div class="click">Rigth Click Anywhere To Continue</div>  
+<a class="LOWER2" href="credits.html">
+  [See Credit] 
+</a>
 
 
 <script>
-  if (window.innerWidth < 768) {
-  alert("Please open this site in a PC/Laptop. Our developers were too lazy to make it responsive :)");
-}
-</script>
+  function checkWindowSize() {
+      if (window.innerWidth < 768) {
+          alert("Please open this site on a PC/Laptop. Our developers were too lazy to make it responsive :)");
+      }
+  }
+
+  document.addEventListener("DOMContentLoaded", function() {
+      checkWindowSize();
+      window.addEventListener("resize", checkWindowSize);
+  });
+</script
 <script src="anime.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
 <script>
