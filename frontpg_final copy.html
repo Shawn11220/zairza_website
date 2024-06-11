@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Krona+One&display=swap" rel="stylesheet">  
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap">
+  <link href="https://vjs.zencdn.net/8.10.0/video-js.css" rel="stylesheet" />
+</head>
+<style>
+  @keyframes move {
+    100% {
+        transform: translate3d(0, 0, 1px) rotate(360deg);
+    }
+}
+
+.background {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background: #000000;
+    overflow: hidden;
+}
+
+.background span {
+    width: 50vmin;
+    height: 50vmin;
+    border-radius: 50vmin;
+    backface-visibility: hidden;
+    position: absolute;
+    animation: move;
+    animation-duration: 35;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+
+.background span:nth-child(0) {
+    color: #0000ff;
+    top: 90%;
+    left: 95%;
+    animation-duration: 13s;
+    animation-delay: -88s;
+    transform-origin: 15vw 12vh;
+    box-shadow: 100vmin 0 13.129924872611895vmin currentColor;
+}
+.background span:nth-child(1) {
+    color: #0000ff;
+    top: 66%;
+    left: 34%;
+    animation-duration: 84s;
+    animation-delay: -31s;
+    transform-origin: 15vw -7vh;
+    box-shadow: -100vmin 0 12.778679232934595vmin currentColor;
+}
+.background span:nth-child(2) {
+    color: #ff8b2c;
+    top: 46%;
+    left: 31%;
+    animation-duration: 81s;
+    animation-delay: -127s;
+    transform-origin: -3vw -20vh;
+    box-shadow: -100vmin 0 13.024859428129348vmin currentColor;
+}
+.background span:nth-child(3) {
+    color: #ff8b2c;
+    top: 25%;
+    left: 55%;
+    animation-duration: 131s;
+    animation-delay: -13s;
+    transform-origin: -11vw -2vh;
+    box-shadow: -100vmin 0 13.300749716479123vmin currentColor;
+}
+.background span:nth-child(4) {
+    color: #5061ff;
+    top: 52%;
+    left: 26%;
+    animation-duration: 83s;
+    animation-delay: -8s;
+    transform-origin: -23vw -3vh;
+    box-shadow: -100vmin 0 12.799614568940342vmin currentColor;
+}
+.background span:nth-child(5) {
+    color: #ff8b2c;
+    top: 11%;
+    left: 8%;
+    animation-duration: 105s;
+    animation-delay: -38s;
+    transform-origin: 21vw -16vh;
+    box-shadow: -100vmin 0 12.875593743345982vmin currentColor;
+}
+.background span:nth-child(6) {
+    color: #0000ff;
+    top: 68%;
+    left: 75%;
+    animation-duration: 39s;
+    animation-delay: -56s;
+    transform-origin: -3vw -3vh;
+    box-shadow: -100vmin 0 13.131370631218203vmin currentColor;
+}
+.background span:nth-child(7) {
+    color: #0000ff;
+    top: 80%;
+    left: 89%;
+    animation-duration: 44s;
+    animation-delay: -76s;
+    transform-origin: -16vw 1vh;
+    box-shadow: 100vmin 0 12.624598705564212vmin currentColor;
+}
+.background span:nth-child(8) {
+    color: #0000ff;
+    top: 78%;
+    left: 41%;
+    animation-duration: 70s;
+    animation-delay: -92s;
+    transform-origin: 12vw 8vh;
+    box-shadow: 100vmin 0 12.891437825923777vmin currentColor;
+}
+.background span:nth-child(9) {
+    color: #e36802;
+    top: 77%;
+    left: 62%;
+    animation-duration: 78s;
+    animation-delay: -137s;
+    transform-origin: -2vw 12vh;
+    box-shadow: 100vmin 0 13.405450007478567vmin currentColor;
+}
+.background span:nth-child(10) {
+    color: #0000ff;
+    top: 95%;
+    left: 94%;
+    animation-duration: 107s;
+    animation-delay: -31s;
+    transform-origin: 8vw -2vh;
+    box-shadow: -100vmin 0 13.202934242746881vmin currentColor;
+}
+.background span:nth-child(11) {
+    color: #e36802;
+    top: 91%;
+    left: 23%;
+    animation-duration: 70s;
+    animation-delay: -117s;
+    transform-origin: -5vw -14vh;
+    box-shadow: 100vmin 0 13.439084485918876vmin currentColor;
+}
+.background span:nth-child(12) {
+    color: #0000ff;
+    top: 47%;
+    left: 69%;
+    animation-duration: 150s;
+    animation-delay: -127s;
+    transform-origin: 5vw -3vh;
+    box-shadow: 100vmin 0 12.850185117491822vmin currentColor;
+}
+.background span:nth-child(13) {
+    color: #5061ff;
+    top: 94%;
+    left: 46%;
+    animation-duration: 104s;
+    animation-delay: -126s;
+    transform-origin: -23vw 25vh;
+    box-shadow: 100vmin 0 13.041180668511766vmin currentColor;
+}
+.background span:nth-child(14) {
+    color: #5061ff;
+    top: 81%;
+    left: 33%;
+    animation-duration: 97s;
+    animation-delay: -83s;
+    transform-origin: -1vw -20vh;
+    box-shadow: 100vmin 0 12.815517686820339vmin currentColor;
+}
+.background span:nth-child(15) {
+    color: #ff8b2c;
+    top: 27%;
+    left: 100%;
+    animation-duration: 153s;
+    animation-delay: -143s;
+    transform-origin: 15vw -19vh;
+    box-shadow: -100vmin 0 12.970178566482993vmin currentColor;
+}
+.background span:nth-child(16) {
+    color: #0000ff;
+    top: 55%;
+    left: 93%;
+    animation-duration: 53s;
+    animation-delay: -43s;
+    transform-origin: -4vw -11vh;
+    box-shadow: 100vmin 0 13.099041784601763vmin currentColor;
+}
+
+.grid-container {
+  display: grid;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  grid-template-columns: repeat(11, 132px);
+  grid-template-rows: repeat(4, 132px); 
+  grid-gap: 1px;
+  width: 98%;
+}
+
+.grid-item {
+  position: relative;
+  width:fit-content;
+  height:fit-content;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.grid-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(100%);
+  z-index: 1; 
+  transition: transform 0.1s ease;
+}
+
+/* Set aspect ratio to 1:1 for images inside grid-items */
+.grid-item img {
+  aspect-ratio: 1 / 1;
+}
+
+.grid-item:hover {
+  transform: scale(1.2);
+  z-index: 2;
+}
+
+.grid-item:hover img{
+  filter: grayscale(0%);
+  z-index: 2;
+}
+
+.zairza {
+  position: fixed;
+  top: 1%;
+  left: 38%;
+  transform: translate(-50%, -50%);
+  
+  
+  color: rgb(255, 200, 200);
+  padding: 10px 20px;
+  font-size: 50px;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: roll-animation 2s cubic-bezier(0.215, 0.610, 0.355, 1) infinite;
+}
+
+@keyframes roll-animation {
+  0% {
+    transform: translateY(0%);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}
+
+.zairza1 {
+  position: fixed;
+  top: 1%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
+  
+  color: rgb(205, 200, 200);
+  padding: 10px 20px;
+  font-size: 50px;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: roll-animation 2s cubic-bezier(0.215, 0.610, 0.355, 1) infinite;
+}
+
+@keyframes roll-animation {
+  0% {
+    transform: translateY(0%);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}
+
+
+
+
+.flextext {
+  display: flex;
+  flex-direction: row;
+  justify-content: center; /* Center vertically */
+  align-items: center; /* Center horizontally */
+  transition: transform 0.5s ease;
+  z-index: 4;
+  position: absolute;
+  transform: translate(-50%,-50%);
+  top: 90%;
+  left: 50%;
+}
+.intp {
+  font-size: 24px;
+  font-family: "Krona One", sans-serif;
+  color: #ef7306;
+  padding: 10px;
+  
+  width: fit-content; /* Adjust width as needed */
+  z-index: 4;
+}
+
+.yrs {
+  font-family: "Krona One", sans-serif;
+  font-weight: 500;
+  font-style: Bold;
+  font-size: 24px;
+  z-index: 4;
+  color: white;
+}
+
+
+
+.filled{
+  fill-opacity: 0%;
+  transition: fill-opacity 4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 7%;
+  left: 50%;
+  z-index: 3;
+}
+.sanadezairza {
+  fill-opacity: 0%;
+  transition: transform 2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 7%;
+  left: 50%;
+}
+
+.click {
+  font-family: 'Montserrat', sans-serif;
+  color: white;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 95%;
+  left: 50%;
+}
+
+.video{
+  
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  
+}
+
+</style>
+<body>
+  <div class="flextext">
+    <div class="yrs">4 Years Of</div>
+    <div class="intp">Div</div>
+  </div>
+  
+  <div class="background">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+ </div>
+ <div class="sanadezairza">
+  <svg width="140" height="43" viewBox="0 0 140 43" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path id="path1" d="M16.1601 41.6261C6.41662 41.6261 3.11183 37.5236 2.76996 37.0678C-0.24994 33.82 1.45943 29.4896 1.68735 29.0337H2.14318C2.14318 36.9538 9.26558 40.9424 15.6472 40.9424C18.952 40.9424 22.0859 39.8598 22.0859 36.0422C22.0859 31.3129 17.4706 28.5209 12.5704 25.558C7.21433 22.2532 1.51641 18.7775 1.51641 11.997C1.51641 4.81761 7.95506 1 14.5077 1C18.3822 1 21.6301 2.59542 25.5616 2.59542C26.6442 2.59542 27.7268 2.0826 28.5245 1.2849C28.8664 4.07688 28.0117 6.47 24.8209 6.47C19.6928 6.47 20.6614 1.56979 14.1658 1.56979C10.6901 1.56979 7.78412 3.79198 7.78412 7.60958C7.78412 12.5098 12.4564 15.0169 17.2996 17.6379C22.9406 20.7148 28.8664 24.0196 28.8664 31.142C28.8664 38.5493 22.5417 41.6261 16.1601 41.6261Z" stroke="#5061FF"/>
+      <path id="path1" d="M55.9774 23.9056V41.1703C53.1284 41.1703 50.6213 39.347 49.4817 36.555C47.9433 39.6319 44.0687 41.7401 39.9092 41.7401C35.009 41.7401 31.7042 38.7772 31.7042 34.2758C31.7042 29.5466 38.7697 25.729 48.798 25.1592V21.7974C48.798 18.3217 46.063 15.3018 42.3593 15.3018C38.3708 15.3018 37.915 19.1194 35.4079 19.1194C31.9891 19.1194 32.6729 16.0995 32.7299 15.7576C36.7754 16.7832 39.1685 14.4471 44.2966 14.4471C51.1341 14.4471 55.9774 18.3217 55.9774 23.9056ZM48.798 34.1619V25.729C40.479 26.4127 38.8266 27.8372 38.8266 34.2758C38.8266 37.9795 40.3081 40.4866 42.8722 40.4866C45.7211 40.4866 48.798 37.4097 48.798 34.1619Z" stroke="#5061FF"/>
+      <path id="path1" d="M83.9661 25.3301V41.1703H76.7868V21.1706C76.7868 16.6693 75.3053 15.2448 73.425 15.2448C71.0888 15.2448 68.1829 17.467 66.8154 18.8345V41.1703H59.693V17.7519C62.428 17.2391 64.8781 16.0425 66.8154 14.4471V18.0937C69.1516 15.7006 71.8866 14.4471 74.8495 14.4471C80.4334 14.4471 83.9661 19.0054 83.9661 25.3301Z" stroke="#5061FF"/>
+      <path id="path1" d="M111.677 23.9056V41.1703C108.828 41.1703 106.321 39.347 105.181 36.555C103.643 39.6319 99.7681 41.7401 95.6086 41.7401C90.7084 41.7401 87.4036 38.7772 87.4036 34.2758C87.4036 29.5466 94.469 25.729 104.497 25.1592V21.7974C104.497 18.3217 101.762 15.3018 98.0587 15.3018C94.0701 15.3018 93.6143 19.1194 91.1072 19.1194C87.6885 19.1194 88.3722 16.0995 88.4292 15.7576C92.4747 16.7832 94.8678 14.4471 99.996 14.4471C106.833 14.4471 111.677 18.3217 111.677 23.9056ZM104.497 34.1619V25.729C96.1784 26.4127 94.526 27.8372 94.526 34.2758C94.526 37.9795 96.0074 40.4866 98.5715 40.4866C101.42 40.4866 104.497 37.4097 104.497 34.1619Z" stroke="#5061FF"/>
+      <path id="path1" d="M138.817 1.2849V41.1703H131.695V36.498C131.581 36.9538 130.271 41.1703 125.883 41.1703C119.445 41.1703 114.544 35.7003 114.544 28.1221C114.544 20.6008 119.445 14.5041 125.484 14.5041C127.82 14.5041 129.929 15.3587 131.695 16.8972V4.58969C134.43 4.0199 136.88 2.88031 138.817 1.2849ZM131.695 33.1932V19.8031C131.695 16.8972 129.929 15.6436 127.251 15.6436C123.262 15.6436 121.667 21.1136 121.667 28.1221C121.667 35.0735 123.205 40.4866 126.681 40.4866C129.188 40.4866 131.695 37.0678 131.695 33.1932Z" stroke="#5061FF"/>
+      </svg>
+  <svg width="62" height="29" viewBox="0 0 62 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path id="path6" d="M1 14.9599V10.5155H14.789V14.9599H1Z" stroke="white"/>
+      <path id="path6" d="M34.4049 26.8116C37.4248 26.8116 40.5017 24.9312 41.7552 21.8544L42.2111 22.1393C40.3877 26.6406 36.1713 28.35 31.9548 28.35C24.6045 28.35 19.3624 22.937 19.3624 14.732C19.3624 6.69792 24.4336 1 31.8409 1C38.6784 1 42.2681 5.04552 42.2681 12.3389H26.4848C26.4278 13.7633 25.915 26.8116 34.4049 26.8116ZM26.4848 11.7121H35.1456V8.40729C35.1456 3.4501 34.177 1.62677 31.6129 1.62677C26.5988 1.62677 26.4848 10.7434 26.4848 11.7121Z" stroke="white"/>
+      <path id="path6" d="M46.8504 14.9599V10.5155H60.6394V14.9599H46.8504Z" stroke="white"/>
+      </svg>
+  <svg width="152" height="42" viewBox="0 0 152 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path id="path9" d="M23.3928 40.2586C29.5466 40.2586 31.3129 36.8399 31.4838 36.498H32.0536L31.028 40.8854H1L21.9113 1.62677H9.66083C3.4501 1.62677 1.74073 5.04552 1.56979 5.3874H1L2.02562 1H32.3955L11.5411 40.2586H23.3928Z" stroke="#FF8B2C"/>
+      <path id="path9" d="M61.8177 23.6207V40.8854C58.9687 40.8854 56.4616 39.0621 55.3221 36.2701C53.7836 39.347 49.909 41.4552 45.7496 41.4552C40.8493 41.4552 37.5446 38.4923 37.5446 33.9909C37.5446 29.2617 44.61 25.4441 54.6383 24.8743V21.5125C54.6383 18.0368 51.9033 15.0169 48.1997 15.0169C44.2111 15.0169 43.7553 18.8345 41.2482 18.8345C37.8295 18.8345 38.5132 15.8146 38.5702 15.4727C42.6157 16.4983 45.0088 14.1622 50.1369 14.1622C56.9744 14.1622 61.8177 18.0368 61.8177 23.6207ZM54.6383 33.877V25.4441C46.3194 26.1278 44.6669 27.5523 44.6669 33.9909C44.6669 37.6946 46.1484 40.2017 48.7125 40.2017C51.5614 40.2017 54.6383 37.1248 54.6383 33.877Z" stroke="#FF8B2C"/>
+      <path id="path9" d="M66.1098 12.3389C66.1098 10.7434 65.2551 9.37594 65.2551 7.66656C65.2551 5.67229 66.7366 4.30479 68.7309 4.30479C70.9531 4.30479 72.3775 5.84323 72.3775 7.72354C72.3775 10.5725 71.5228 13.1366 65.4261 14.561C65.9389 13.7633 66.1098 13.0226 66.1098 12.3389ZM65.2551 40.8854V17.467C67.9901 16.8972 70.4402 15.7576 72.3775 14.1622V40.8854H65.2551Z" stroke="#FF8B2C"/>
+      <path id="path9" d="M94.8571 15.5297C94.9141 15.8716 95.4269 18.8915 92.407 18.8915C89.4441 18.8915 89.615 15.1878 86.5381 15.1878C85.1137 15.1878 84.0881 16.0995 83.0055 17.0681V40.8854H75.8831V17.467C78.6181 16.8972 81.0682 15.7576 83.0055 14.1622V16.2704C84.8858 14.675 86.7661 14.2192 88.5894 14.2192C91.2674 14.2192 92.521 16.4983 94.8571 15.5297Z" stroke="#FF8B2C"/>
+      <path id="path9" d="M123.521 36.498L122.496 40.8854H98.9062L113.949 14.789H107.567C101.356 14.789 99.647 18.2077 99.476 18.5496H98.9062L99.9319 14.1622H122.724L107.681 40.2586H114.86C121.071 40.2586 122.78 36.8399 123.008 36.498H123.521Z" stroke="#FF8B2C"/>
+      <path id="path9" d="M150.736 23.6207V40.8854C147.887 40.8854 145.38 39.0621 144.241 36.2701C142.702 39.347 138.828 41.4552 134.668 41.4552C129.768 41.4552 126.463 38.4923 126.463 33.9909C126.463 29.2617 133.529 25.4441 143.557 24.8743V21.5125C143.557 18.0368 140.822 15.0169 137.118 15.0169C133.13 15.0169 132.674 18.8345 130.167 18.8345C126.748 18.8345 127.432 15.8146 127.489 15.4727C131.534 16.4983 133.927 14.1622 139.056 14.1622C145.893 14.1622 150.736 18.0368 150.736 23.6207ZM143.557 33.877V25.4441C135.238 26.1278 133.586 27.5523 133.586 33.9909C133.586 37.6946 135.067 40.2017 137.631 40.2017C140.48 40.2017 143.557 37.1248 143.557 33.877Z" stroke="#FF8B2C"/>
+      </svg>
+</div>
+<div class="filled">
+  <svg width="138" height="41" viewBox="0 0 138 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M15.1601 40.6261C5.41662 40.6261 2.11183 36.5236 1.76996 36.0678C-1.24994 32.82 0.459435 28.4896 0.687351 28.0337H1.14318C1.14318 35.9538 8.26558 39.9424 14.6472 39.9424C17.952 39.9424 21.0859 38.8598 21.0859 35.0422C21.0859 30.3129 16.4706 27.5209 11.5704 24.558C6.21433 21.2532 0.516414 17.7775 0.516414 10.997C0.516414 3.81761 6.95506 0 13.5077 0C17.3822 0 20.6301 1.59542 24.5616 1.59542C25.6442 1.59542 26.7268 1.0826 27.5245 0.284895C27.8664 3.07688 27.0117 5.47 23.8209 5.47C18.6928 5.47 19.6614 0.569791 13.1658 0.569791C9.69006 0.569791 6.78412 2.79198 6.78412 6.60958C6.78412 11.5098 11.4564 14.0169 16.2996 16.6379C21.9406 19.7148 27.8664 23.0196 27.8664 30.142C27.8664 37.5493 21.5417 40.6261 15.1601 40.6261Z" fill="#5061FF"/>
+      <path d="M54.9774 22.9056V40.1703C52.1284 40.1703 49.6213 38.347 48.4817 35.555C46.9433 38.6319 43.0687 40.7401 38.9092 40.7401C34.009 40.7401 30.7042 37.7772 30.7042 33.2758C30.7042 28.5466 37.7697 24.729 47.798 24.1592V20.7974C47.798 17.3217 45.063 14.3018 41.3593 14.3018C37.3708 14.3018 36.915 18.1194 34.4079 18.1194C30.9891 18.1194 31.6729 15.0995 31.7299 14.7576C35.7754 15.7832 38.1685 13.4471 43.2966 13.4471C50.1341 13.4471 54.9774 17.3217 54.9774 22.9056ZM47.798 33.1619V24.729C39.479 25.4127 37.8266 26.8372 37.8266 33.2758C37.8266 36.9795 39.3081 39.4866 41.8722 39.4866C44.7211 39.4866 47.798 36.4097 47.798 33.1619Z" fill="#5061FF"/>
+      <path d="M82.9661 24.3301V40.1703H75.7868V20.1706C75.7868 15.6693 74.3053 14.2448 72.425 14.2448C70.0888 14.2448 67.1829 16.467 65.8154 17.8345V40.1703H58.693V16.7519C61.428 16.2391 63.8781 15.0425 65.8154 13.4471V17.0937C68.1516 14.7006 70.8866 13.4471 73.8495 13.4471C79.4334 13.4471 82.9661 18.0054 82.9661 24.3301Z" fill="#5061FF"/>
+      <path d="M110.677 22.9056V40.1703C107.828 40.1703 105.321 38.347 104.181 35.555C102.643 38.6319 98.7681 40.7401 94.6086 40.7401C89.7084 40.7401 86.4036 37.7772 86.4036 33.2758C86.4036 28.5466 93.469 24.729 103.497 24.1592V20.7974C103.497 17.3217 100.762 14.3018 97.0587 14.3018C93.0701 14.3018 92.6143 18.1194 90.1072 18.1194C86.6885 18.1194 87.3722 15.0995 87.4292 14.7576C91.4747 15.7832 93.8678 13.4471 98.996 13.4471C105.833 13.4471 110.677 17.3217 110.677 22.9056ZM103.497 33.1619V24.729C95.1784 25.4127 93.526 26.8372 93.526 33.2758C93.526 36.9795 95.0074 39.4866 97.5715 39.4866C100.42 39.4866 103.497 36.4097 103.497 33.1619Z" fill="#5061FF"/>
+      <path d="M137.817 0.284895V40.1703H130.695V35.498C130.581 35.9538 129.271 40.1703 124.883 40.1703C118.445 40.1703 113.544 34.7003 113.544 27.1221C113.544 19.6008 118.445 13.5041 124.484 13.5041C126.82 13.5041 128.929 14.3587 130.695 15.8972V3.58969C133.43 3.0199 135.88 1.88031 137.817 0.284895ZM130.695 32.1932V18.8031C130.695 15.8972 128.929 14.6436 126.251 14.6436C122.262 14.6436 120.667 20.1136 120.667 27.1221C120.667 34.0735 122.205 39.4866 125.681 39.4866C128.188 39.4866 130.695 36.0678 130.695 32.1932Z" fill="#5061FF"/>
+      </svg>
+  <svg width="60" height="28" viewBox="0 0 60 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 13.9599V9.51552H13.789V13.9599H0Z" fill="white"/>
+      <path d="M33.4049 25.8116C36.4248 25.8116 39.5017 23.9312 40.7552 20.8544L41.2111 21.1393C39.3877 25.6406 35.1713 27.35 30.9548 27.35C23.6045 27.35 18.3624 21.937 18.3624 13.732C18.3624 5.69792 23.4336 0 30.8409 0C37.6784 0 41.2681 4.04552 41.2681 11.3389H25.4848C25.4278 12.7633 24.915 25.8116 33.4049 25.8116ZM25.4848 10.7121H34.1456V7.40729C34.1456 2.4501 33.177 0.626771 30.6129 0.626771C25.5988 0.626771 25.4848 9.74344 25.4848 10.7121Z" fill="white"/>
+      <path d="M45.8504 13.9599V9.51552H59.6394V13.9599H45.8504Z" fill="white"/>
+      </svg>
+  <svg width="150" height="41" viewBox="0 0 150 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M22.3928 39.2586C28.5466 39.2586 30.3129 35.8399 30.4838 35.498H31.0536L30.028 39.8854H0L20.9113 0.626773H8.66083C2.4501 0.626773 0.740731 4.04552 0.569794 4.3874H0L1.02562 0H31.3955L10.5411 39.2586H22.3928Z" fill="#FF8B2C"/>
+      <path d="M60.8177 22.6207V39.8854C57.9687 39.8854 55.4616 38.0621 54.3221 35.2701C52.7836 38.347 48.909 40.4552 44.7496 40.4552C39.8493 40.4552 36.5446 37.4923 36.5446 32.9909C36.5446 28.2617 43.61 24.4441 53.6383 23.8743V20.5125C53.6383 17.0368 50.9033 14.0169 47.1997 14.0169C43.2111 14.0169 42.7553 17.8345 40.2482 17.8345C36.8295 17.8345 37.5132 14.8146 37.5702 14.4727C41.6157 15.4983 44.0088 13.1622 49.1369 13.1622C55.9744 13.1622 60.8177 17.0368 60.8177 22.6207ZM53.6383 32.877V24.4441C45.3194 25.1278 43.6669 26.5523 43.6669 32.9909C43.6669 36.6946 45.1484 39.2017 47.7125 39.2017C50.5614 39.2017 53.6383 36.1248 53.6383 32.877Z" fill="#FF8B2C"/>
+      <path d="M65.1098 11.3389C65.1098 9.74343 64.2551 8.37594 64.2551 6.66656C64.2551 4.67229 65.7366 3.30479 67.7309 3.30479C69.9531 3.30479 71.3775 4.84323 71.3775 6.72354C71.3775 9.5725 70.5228 12.1366 64.4261 13.561C64.9389 12.7633 65.1098 12.0226 65.1098 11.3389ZM64.2551 39.8854V16.467C66.9901 15.8972 69.4402 14.7576 71.3775 13.1622V39.8854H64.2551Z" fill="#FF8B2C"/>
+      <path d="M93.8571 14.5297C93.9141 14.8716 94.4269 17.8915 91.407 17.8915C88.4441 17.8915 88.615 14.1878 85.5381 14.1878C84.1137 14.1878 83.0881 15.0995 82.0055 16.0681V39.8854H74.8831V16.467C77.6181 15.8972 80.0682 14.7576 82.0055 13.1622V15.2704C83.8858 13.675 85.7661 13.2192 87.5894 13.2192C90.2674 13.2192 91.521 15.4983 93.8571 14.5297Z" fill="#FF8B2C"/>
+      <path d="M122.521 35.498L121.496 39.8854H97.9062L112.949 13.789H106.567C100.356 13.789 98.647 17.2077 98.476 17.5496H97.9062L98.9319 13.1622H121.724L106.681 39.2586H113.86C120.071 39.2586 121.78 35.8399 122.008 35.498H122.521Z" fill="#FF8B2C"/>
+      <path d="M149.736 22.6207V39.8854C146.887 39.8854 144.38 38.0621 143.241 35.2701C141.702 38.347 137.828 40.4552 133.668 40.4552C128.768 40.4552 125.463 37.4923 125.463 32.9909C125.463 28.2617 132.529 24.4441 142.557 23.8743V20.5125C142.557 17.0368 139.822 14.0169 136.118 14.0169C132.13 14.0169 131.674 17.8345 129.167 17.8345C125.748 17.8345 126.432 14.8146 126.489 14.4727C130.534 15.4983 132.927 13.1622 138.056 13.1622C144.893 13.1622 149.736 17.0368 149.736 22.6207ZM142.557 32.877V24.4441C134.238 25.1278 132.586 26.5523 132.586 32.9909C132.586 36.6946 134.067 39.2017 136.631 39.2017C139.48 39.2017 142.557 36.1248 142.557 32.877Z" fill="#FF8B2C"/>
+      </svg>     
+</div>
+<div class="grid-container">
+  <div class="grid-item">
+    <img src="img\image1.jpg" alt="Image 1">
+  </div>
+  <div class="grid-item">
+    <img src="img\image2.jpg" alt="Image 2">
+  </div>
+  <div class="grid-item">
+    <img src="img\image3.jpg" alt="Image 3">
+  </div>
+  <div class="grid-item">
+    <img src="img\image4.jpg" alt="Image 4">
+  </div>
+  <div class="grid-item">
+    <img src="img\image5.jpg" alt="Image 5">
+  </div>
+  <div class="grid-item">
+    <img src="img\image6.jpg" alt="Image 6">
+  </div>
+  <div class="grid-item">
+    <img src="img\image7.jpg" alt="Image 4">
+  </div>
+  <div class="grid-item">
+    <img src="img\image8.jpg" alt="Image 5">
+  </div>
+  <div class="grid-item">
+    <img src="img\image9.jpg" alt="Image 6">
+  </div>
+  <div class="grid-item">
+    <img src="img\image10.jpg" alt="Image 4">
+
+  </div>
+  <div class="grid-item">
+    <img src="img\image11.jpg" alt="Image 5">
+  </div>
+  <div class="grid-item">
+    <img src="img\image12.jpg" alt="Image 6">
+  </div>
+  <div class="grid-item">
+    <img src="img\image13.jpg" alt="Image 4">
+  </div>
+  <div class="grid-item">
+    <img src="img\image14.jpg" alt="Image 5">
+  </div>
+  <div class="grid-item">
+    <img src="img\image15.jpg" alt="Image 6">
+  </div>
+  <div class="grid-item">
+    <img src="img\image16.jpg" alt="Image 4">
+  </div>
+  <div class="grid-item">
+    <img src="img\image17.jpg" alt="Image 5">
+  </div>
+  <div class="grid-item">
+    <img src="img\image18.jpg" alt="Image 6">
+  </div>
+  <div class="grid-item">
+    <img src="img\image19.jpg" alt="Image 4">
+  </div>
+  <div class="grid-item">
+    <img src="img\image20.jpg" alt="Image 5">
+  </div>
+  <div class="grid-item">
+    <img src="img\image21.jpg" alt="Image 6">
+  </div>
+  <div class="grid-item">
+    <img src="img\image22.jpg" alt="Image 4">
+  </div>
+  <div class="grid-item">
+    <img src="img\image23.jpg" alt="Image 5">
+  </div>
+  <div class="grid-item">
+    <img src="img\image24.jpg" alt="Image 6">
+  </div>
+  <div class="grid-item">
+    <img src="img\image25.jpg" alt="Image 4">
+  </div>
+  <div class="grid-item">
+    <img src="img\image26.jpg" alt="Image 5">
+  </div>
+  <div class="grid-item">
+    <img src="img\image27.jpg" alt="Image 6">
+  </div>
+  <div class="grid-item">
+    <img src="img\image28.jpg" alt="Image 4">
+  </div>
+  <div class="grid-item">
+    <img src="img\image29.jpg" alt="Image 5">
+  </div>
+  <div class="grid-item">
+    <img src="img\image30.jpg" alt="Image 6">
+  </div>
+  <div class="grid-item">
+    <img src="img\image31.jpg" alt="Image 1">
+  </div>
+  <div class="grid-item">
+    <img src="img\image32.jpg" alt="Image 2">
+  </div>
+  <div class="grid-item">
+    <img src="img\image33.jpg" alt="Image 3">
+  </div>
+  <div class="grid-item">
+    <img src="img\image34.jpg" alt="Image 4">
+  </div>
+  <div class="grid-item">
+    <img src="img\image35.jpg" alt="Image 5">
+  </div>
+  <div class="grid-item">
+    <img src="img\image36.jpg" alt="Image 1">
+  </div>
+  <div class="grid-item">
+    <img src="img\image37.jpg" alt="Image 2">
+  </div>
+  <div class="grid-item">
+    <img src="img\image38.jpg" alt="Image 3">
+  </div>
+  <div class="grid-item">
+    <img src="img\image39.jpg" alt="Image 4">
+  </div>
+  <div class="grid-item">
+    <img src="img\image40.jpg" alt="Image 5">
+  </div>
+  <div class="grid-item">
+    <img src="img\image41.jpg" alt="Image 1">
+  </div>
+  <div class="grid-item">
+    <img src="img\image42.jpg" alt="Image 2">
+  </div>
+  <div class="grid-item">
+    <img src="img\image43.jpg" alt="Image 3">
+  </div>
+  <div class="grid-item">
+    <img src="img\image44.jpg" alt="Image 4">
+  </div> 
+</div>
+<div class="click">-: Click Anywhere To Continue :-</div>  
+
+
+<script>
+  if (window.innerWidth < 768) {
+  alert("Please open this site in a PC/Laptop. Our developers were too lazy to make it responsive :)");
+}
+</script>
+<script src="anime.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+<script>
+  document.addEventListener("contextmenu", function(event) {
+    // Prevent the default context menu from appearing
+    event.preventDefault();
+  
+    // Define the Anime.js animation
+    const animation = anime({
+      targets: '.grid-item',
+      scale: [
+        {value: 0.1, easing: 'easeOutSine', duration: 500},
+        {value: 1, easing: 'easeInOutQuad', duration: 1200}
+      ],
+      delay: anime.stagger(200, {grid: [11, 4], from: 'center'}),
+      // Execute this function when the animation completes
+      complete: function() {
+        // Set the opacity of the grid container to 0
+        document.querySelector('.grid-container').style.transition = 'opacity 1s ease';
+        document.querySelector('.grid-container').style.opacity = 0;
+        document.querySelector('.sanadezairza').style.transition = 'opacity 1s ease';
+        document.querySelector('.sanadezairza').style.opacity = 0;
+        document.querySelector('.filled').style.transition = 'opacity 1s ease';
+        document.querySelector('.filled').style.opacity = 0;
+        document.querySelector('.flextext').style.transition = 'opacity 1s ease';
+        document.querySelector('.flextext').style.opacity = 0;
+        document.querySelector('.video').style.display = 'block';
+      }
+    });
+  });
+  
+</script>
+<script> 
+  const texts = ["MEMORIES 😄", "CHUTIYAPE 🙂", "HARDSHIPS 😫", "CHAOS 🤯", "BAKCHODI 😆"]; 
+  const intpDiv = document.querySelector('.intp'); 
+  let currentIndex = 0;
+  
+  // Function to update text
+  function updateText() {
+    intpDiv.textContent = texts[currentIndex]; // Set the text content of the div
+    currentIndex = (currentIndex + 1) % texts.length; // Increment the index, looping back to 0 if it exceeds the array length
+  }
+  
+  // Call updateText initially
+  updateText();
+  
+  // Set interval to update text every 0.4 seconds
+  setInterval(updateText, 1000);
+
+</script>
+<script>
+  // Define the paths you want to animate
+  const paths = document.querySelectorAll('path');
+  
+  // Set up the animation properties
+  paths.forEach(path => {
+    const length = path.getTotalLength(); // Get the total length of each path
+    path.style.strokeDasharray = length; // Set the stroke dash array to the length
+    path.style.strokeDashoffset = length; // Set the stroke dash offset to the length
+  });
+  
+  // Define the animation
+  const animation = anime({
+    targets: paths,
+    strokeDashoffset: [anime.setDashoffset, 0],
+    easing: 'easeInOutSine',
+    duration: 1200, // Animation duration in milliseconds
+    delay: anime.stagger(200), // Delay between animations for each path
+    direction: 'alternate', // Alternate the direction of the animation
+    loop: true // Loop the animation infinitely
+  });
+  document.addEventListener("DOMContentLoaded", function() {
+      const filledElement = document.querySelector('.filled');
+    
+      // After a delay of 4 seconds, set the fill-opacity to 100%
+      setTimeout(function() {
+        filledElement.style.fillOpacity = '100%';
+      },2000);
+    });
+    
+</script>
+</body>
+</html>
