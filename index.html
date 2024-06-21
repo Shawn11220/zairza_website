@@ -408,6 +408,20 @@
         color:#ffffff;
         z-index: 998;
     }
+    @media(max-width:1000px){
+      .LOWER2 { 
+        position:relative;
+        transform: translate(-50%,-50%);
+        bottom: 0%;
+        left: 45%;
+        font-family:"rebelton", sans-serif;
+        font-size: 15px;
+        color:#ffffff;
+        z-index: 998;
+        width: 80%;
+        text-align: center;
+    }
+    }
 </style>
 <body>
   <div class="flextext">
@@ -620,11 +634,7 @@
 
 
 <script>
-  function checkWindowSize() {
-      if (window.innerWidth < 768) {
-          alert("Please open this site on a PC/Laptop. Our developers were too lazy to make it responsive :)");
-      }
-  }
+
 
   document.addEventListener("DOMContentLoaded", function() {
       checkWindowSize();
