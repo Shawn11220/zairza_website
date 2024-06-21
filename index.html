@@ -502,7 +502,7 @@
   }
   body {
   animation: MoveUpDown 10s linear infinite;
-  position: absolute;
+  position: relative;
   left: 0;
   bottom: 0;
 }
@@ -513,6 +513,11 @@
   }
   50% {
     bottom: 100px;
+  }
+}
+@media(max-width:540px){
+  body{
+    animation: none;
   }
 }
 </style>
