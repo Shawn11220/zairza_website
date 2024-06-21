@@ -493,6 +493,28 @@
       text-align: center;
     }
   }
+  #divv{
+    background-color: red;
+    color: white;
+    position: absolute;
+    bottom: -15%;
+    opacity: 0;
+  }
+  body {
+  animation: MoveUpDown 10s linear infinite;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+@keyframes MoveUpDown {
+  0%, 100% {
+    bottom: 0;
+  }
+  50% {
+    bottom: 100px;
+  }
+}
 </style>
 
 <body>
@@ -721,12 +743,15 @@
   </div>
   <!-- <div class="click">Rigth Click Anywhere To Continue</div>   -->
 
-  <a class="click" href="horizontalscr.html">
+  <a class="click" href="horizontalscr.html" style="cursor: pointer;">
     Click Here To Continue
   </a>
   <a class="LOWER2" href="credits.html">
     [See Credit]
   </a>
+  <!-- <div id="divv">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere inventore labore quas quod eveniet cumque perferendis, laudantium placeat, harum eaque temporibus necessitatibus amet itaque! Cum, ut. Officiis provident ducimus deleniti iure distinctio! Perspiciatis quae accusamus voluptatum natus esse non, dolore provident repellat rerum, incidunt consequuntur fugiat consequatur beatae obcaecati itaque nulla officia nisi nam quasi laborum libero dolor. Facilis impedit sapiente amet molestiae perferendis aliquam odio dolore natus hic fuga corporis, praesentium nisi voluptate eaque magni maiores quaerat quod blanditiis optio, perspiciatis voluptatem eius. Officiis ullam amet voluptate dolores, eius rem repudiandae, iste officia numquam repellat quisquam dolore? Aut, distinctio!
+  </div> -->
 
 
   <script>
