@@ -408,33 +408,6 @@
         color:#ffffff;
         z-index: 998;
     }
-    @media(max-width:1000px){
-      .LOWER2 { 
-        position:relative;
-        transform: translate(-50%,-50%);
-        bottom: 0%;
-        left: 45%;
-        font-family:"rebelton", sans-serif;
-        font-size: 15px;
-        color:#ffffff;
-        z-index: 998;
-        width: 80%;
-        text-align: center;
-    }
-    @media(max-width:420px){
-      .LOWER2 { 
-        position:relative;
-        transform: translate(-50%,-50%);
-        bottom: 0%;
-        left: 39%;
-        font-family:"rebelton", sans-serif;
-        font-size: 15px;
-        color:#ffffff;
-        z-index: 998;
-        width: 80%;
-        text-align: center;
-    }
-    }
 </style>
 <body>
   <div class="flextext">
@@ -640,19 +613,27 @@
     <img src="img\image44.jpg" alt="Image 4">
   </div> 
 </div>
-<div class="click">Rigth Click Anywhere To Continue</div>  
+<!-- <div class="click">Rigth Click Anywhere To Continue</div>   -->
+
+<a class="click" href="horizontalscr.html">
+  Click Here To Continue 
+</a>
 <a class="LOWER2" href="credits.html">
   [See Credit] 
 </a>
 
 
 <script>
+  // function checkWindowSize() {
+  //     if (window.innerWidth < 768) {
+  //         alert("Please open this site on a PC/Laptop. Our developers were too lazy to make it responsive :)");
+  //     }
+  // }
 
-
-  document.addEventListener("DOMContentLoaded", function() {
-      checkWindowSize();
-      window.addEventListener("resize", checkWindowSize);
-  });
+  // document.addEventListener("DOMContentLoaded", function() {
+  //     checkWindowSize();
+  //     window.addEventListener("resize", checkWindowSize);
+  // });
 </script
 <script src="anime.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
