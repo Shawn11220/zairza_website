@@ -214,6 +214,18 @@
         white-space: nowrap;
         padding: 30px 0px; /* Adjusted padding to prevent content from sticking to scrollbar */
     }
+    @media(max-width:741px){
+        .container {
+        position:absolute;
+        transform: translate(-50%,-50%);
+        top: 60%;
+        left: 50%;
+        width: calc(100% - 20px); /* Adjusted width to accommodate scrollbar */
+        overflow-x: hidden; /* Enable horizontal scrollbar */
+        white-space: nowrap;
+        padding: 30px 0px; /* Adjusted padding to prevent content from sticking to scrollbar */
+    }
+    }
     .item {
         display: inline-block;
         margin-right: 20px;
@@ -240,6 +252,8 @@
         color:#ff8b2c;
         z-index: 999;
         font-weight: bold;
+        width: 80%;
+        text-align:center;
     }
     .title2 { 
         position:absolute;
@@ -251,6 +265,8 @@
         font-size: 48px;
         color:#5061ff;
         z-index: 998;
+        width: 80%;
+        text-align:center;
     }
     .title3 { 
         position:absolute;
@@ -261,6 +277,79 @@
         font-size: 18px;
         color:#ffffff;
         z-index: 998;
+        width: 80%;
+        text-align:center;
+    }
+    @media(max-width:741px){
+        .title3 { 
+        position:relative;
+        transform: translate(-50%,-50%);
+        top: 120px;
+        left: 50%;
+        font-family:"rebelton", sans-serif;
+        font-size: 18px;
+        color:#ffffff;
+        z-index: 998;
+        width: 80%;
+        text-align:center;
+        margin: 50px 0;
+    }
+    }
+    @media(max-width:418px){
+        .title { 
+        position:absolute;
+        transform: translate(-50%,-50%);
+        top: 70px;
+        left: 50%;
+        font-family:"rebelton", sans-serif;
+        font-size: 40px;
+        color:#ff8b2c;
+        z-index: 999;
+        font-weight: bold;
+        width: 80%;
+        text-align:center;
+    }
+    .title2 { 
+        position:absolute;
+        transform: translate(-50%,-50%);
+        filter: blur(3px);
+        top: 73px;
+        left: 50.2%;
+        font-family:"rebelton", sans-serif;
+        font-size: 40px;
+        color:#5061ff;
+        z-index: 998;
+        width: 80%;
+        text-align:center;
+    }
+    }
+    @media(max-width:350px){
+        .title { 
+        position:absolute;
+        transform: translate(-50%,-50%);
+        top: 70px;
+        left: 50%;
+        font-family:"rebelton", sans-serif;
+        font-size: 35px;
+        color:#ff8b2c;
+        z-index: 999;
+        font-weight: bold;
+        width: 80%;
+        text-align:center;
+    }
+    .title2 { 
+        position:absolute;
+        transform: translate(-50%,-50%);
+        filter: blur(3px);
+        top: 73px;
+        left: 50.2%;
+        font-family:"rebelton", sans-serif;
+        font-size: 35px;
+        color:#5061ff;
+        z-index: 998;
+        width: 80%;
+        text-align:center;
+    }
     }
 
     .LOWER1 { 
@@ -272,8 +361,10 @@
         font-size: 18px;
         color:#ffffff;
         z-index: 998;
+        width: 80%;
+        text-align: center;
     }
-
+    
     .LOWER2 { 
         position:absolute;
         transform: translate(-50%,-50%);
@@ -284,7 +375,38 @@
         font-weight: bold;
         color:#ffffff75;
         z-index: 998;
+        width: 80%;
+        text-align: center;
     }
+    @media(max-width:741px){
+        .LOWER1 { 
+        position:absolute;
+        transform: translate(-50%,-50%);
+        bottom: 10px;
+        left: 50%;
+        font-family:"rebelton", sans-serif;
+        font-size: 18px;
+        color:#ffffff;
+        z-index: 998;
+        width: 80%;
+        text-align: center;
+    }
+    .LOWER2 { 
+        position:absolute;
+        transform: translate(-50%,-50%);
+        bottom: -120px;
+        left: 50%;
+        font-family:"rebelton", sans-serif;
+        font-size: 10px;
+        font-weight: bold;
+        color:#ffffff75;
+        z-index: 998;
+        width: 80%;
+        text-align: center;
+        padding-bottom: 50px;
+    }
+    }
+
 
     .popbutton {
         display: none;
